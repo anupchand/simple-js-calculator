@@ -8,10 +8,10 @@ let hLength;
 
 const mainLcd = document.getElementById("lcdScreen");
 const historyScreen = document.getElementById("history");
-const checkDecimal = mainLcd.innerText.includes(`.`);
+let checkDecimal = mainLcd.innerText.includes(`.`);
 hLength = historyScreen.innerText.length;
-console.log(`Decimal present: ${checkDecimal}`);
-console.log(`Top lcd char length: ${hLength}`);
+//console.log(`Decimal present: ${checkDecimal}`);
+//console.log(`Top lcd char length: ${hLength}`);
 
 let ansCount = 0;
 //const zero = "0";
@@ -39,14 +39,14 @@ function takeNumbers(activeID) {
 function takeDecimal(activeID) {
   //console.log(`The button clicked was ${activeID}`);
   activeButton = document.getElementById(activeID);
-  if (mainLcd.innerText === `0` && checkDecimal === false) {
+  let checkDecimal = mainLcd.innerText.includes(`.`);
+
+  if (Number(mainLcd.innerText) === 0 && checkDecimal === false) {
     //console.log(`count = ${ansCount}`);
     mainLcd.innerText = `0.`;
   } else if (mainLcd.innerText === `Welcome` && checkDecimal === false) {
     mainLcd.innerText = `0.`;
   } else if (Number(mainLcd.innerText) >= 1 && checkDecimal === false) {
-    //console.log(`count = ${ansCount}`);
-    //console.log(`Disabling number input..press C`);
     mainLcd.insertAdjacentText("beforeend", `.`);
   } else if (Number(mainLcd.innerText) >= 1 && checkDecimal === true) {
     return;
@@ -57,10 +57,10 @@ function takeOperators(activeOprID) {
   //console.log("The operator used was " + activeOprID);
   //console.log(`count = ${ansCount}`);
   hLength = historyScreen.innerText.length;
-  console.log(`Top lcd char length: ${hLength}`);
+  //console.log(`Top lcd char length: ${hLength}`);
   activeOpr = document.getElementById(activeOprID);
 
-  if (hLength === 1 && ansCount === 0) {
+  if (hLength === 1 && ansCount === 0 && mainLcd.innerText !== `Welcome`) {
     historyScreen.innerText = `${mainLcd.innerText} ${activeOpr.innerText}`;
     hLength = historyScreen.innerText.length;
   } else if (hLength > 1 && ansCount === 0) {
@@ -88,5 +88,6 @@ document.getElementById("answer").onclick = function showAnswer() {
   ansCount = 1;
   oprCount = 0;
 };
+
 /*Installed GIT */
 /* added files to tracking for git */

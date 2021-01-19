@@ -80,7 +80,7 @@ button,
   justify-content: space-around;
   background-color: #ffeb3b;
   border: none;
-  margin: 30px;
+  margin: 10px;
   flex: 0.8;
   color: rgb(0, 0, 0);
   text-align: center;
@@ -92,9 +92,8 @@ button,
 #clearButton,
 #product {
   justify-content: space-between;
-  padding: 5px;
-  margin: 30px;
-  flex: 0.22;
+  margin: 10px;
+  flex: 0.21;
 }
 #clearButton {
   margin-right: auto;
@@ -106,7 +105,7 @@ button,
 
 #clearButton {
   background-color: #cc5526 !important;
-  float: left;
+  float: left !important;
 }
 
 #answer {
@@ -118,10 +117,74 @@ button,
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 425px) {
+  #clearButton,
+  #product {
+    flex: 0.19;
+  }
+
+  #clearButton {
+    margin-left: 7px;
+  }
+  #product {
+    margin-right: 7px;
+  }
+
+  button,
+  .numButton,
+  .oprButton {
+    margin: 7px;
+  }
+
+  .displayArea > #history {
+    font-size: 3vw;
+  }
 }
 
-@media and screen(min-width=425px) {
+@media only screen and (min-width: 1024px) {
+  #clearButton,
+  #product {
+    flex: 0.22;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #clearButton,
+  #product {
+    flex: 0.214;
+  }
+  #clearButton {
+    margin-left: 20px;
+  }
+  #product {
+    margin-right: 20px;
+  }
+  button,
+  .numButton,
+  .oprButton {
+    margin: 20px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  #clearButton,
+  #product {
+    justify-content: space-between;
+    flex: 0.221;
+  }
+
+  #clearButton {
+    margin-left: 30px;
+  }
+  #product {
+    margin-right: 30px;
+  }
+
+  button,
+  .numButton,
+  .oprButton {
+    margin: 30px;
+  }
 }
 
 .blink {
