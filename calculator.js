@@ -39,13 +39,17 @@ function takeNumbers(activeID) {
 function takeDecimal(activeID) {
   //console.log(`The button clicked was ${activeID}`);
   activeButton = document.getElementById(activeID);
-  if (mainLcd.innerText === `0` || mainLcd.innerText === `Welcome`) {
+  if (mainLcd.innerText === `0` && checkDecimal === false) {
     //console.log(`count = ${ansCount}`);
     mainLcd.innerText = `0.`;
-  } else {
+  } else if (mainLcd.innerText === `Welcome` && checkDecimal === false) {
+    mainLcd.innerText = `0.`;
+  } else if (Number(mainLcd.innerText) >= 1 && checkDecimal === false) {
     //console.log(`count = ${ansCount}`);
     //console.log(`Disabling number input..press C`);
     mainLcd.insertAdjacentText("beforeend", `.`);
+  } else if (Number(mainLcd.innerText) >= 1 && checkDecimal === true) {
+    return;
   }
 }
 
