@@ -6,6 +6,8 @@ let problem;
 let oprCount;
 let hLength;
 
+alert(Welcome to the simple JS™ calculator);
+
 const mainLcd = document.getElementById("lcdScreen");
 const historyScreen = document.getElementById("history");
 let checkDecimal = mainLcd.innerText.includes(`.`);
