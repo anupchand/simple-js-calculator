@@ -23,11 +23,11 @@ document.getElementById("clearButton").onclick = function clearLcd() {
   ansCount = 0;
   hLength = historyScreen.innerText.length;
   //console.log(`count = ${ansCount}`);
-  console.log(`Top lcd char length: ${hLength}`);
+  // console.log(`Top lcd char length: ${hLength}`);
 };
 
 function takeNumbers(activeID) {
-  console.log("The button clicked was " + activeID);
+  // console.log("The button clicked was " + activeID);
   activeButton = document.getElementById(activeID);
   if (mainLcd.innerText === `0` || mainLcd.innerText === `Welcome`) {
     mainLcd.innerText = activeButton.innerText;
@@ -39,7 +39,7 @@ function takeNumbers(activeID) {
 function takeDecimal(activeID) {
   //console.log(`The button clicked was ${activeID}`);
   activeButton = document.getElementById(activeID);
-  let checkDecimal = mainLcd.innerText.includes(`.`);
+  // let checkDecimal = mainLcd.innerText.includes(`.`);
 
   if (Number(mainLcd.innerText) === 0 && checkDecimal === false) {
     //console.log(`count = ${ansCount}`);
