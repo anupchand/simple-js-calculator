@@ -2,10 +2,8 @@
 
 # Simple JavaScript Calculator
 
-#Use simple mathematical operators on numbers.
+#Use simple mathematical operatations on numbers.
 
 #Prevents decimal repetetion.
 
 #Answer can be used for further math operations.
-
-
