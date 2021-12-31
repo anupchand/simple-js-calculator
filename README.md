@@ -1,6 +1,6 @@
-#This is my first ever work as a part of learning HTML , CSS and JavaScript.
-
 # Simple JavaScript Calculator
+
+#This is my first ever work as a part of learning HTML , CSS and JavaScript.
 
 #Use simple mathematical operatations on numbers.
 
