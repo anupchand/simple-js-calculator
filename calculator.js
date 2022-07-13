@@ -1,5 +1,19 @@
+//---- This is my first ever project using Javascript, in about 2 weeks of learing ----//
+//---- Just like the calculator I had during school, I wanted the calculator to have ----//
+//---- multiple displays, one for the current operation and one showing history----//
+//---- You will not find any advanced logic, it just captures the pressed keys,----//
+//---- symbols and then the whole whole string is processed in one go----//
+//---- since, JS is capable of solving mathematical expressions, I looked----//
+//---- up for a function that could do so, so I found the eval() function----//
+//---- eval() is used here only with the .innertext, the user does not have the privillege----//
+//---- to enter any JS via the user interface. Still after learning that eval() is better not used to a function----//
+//---- made sure it gets the arguments as STRING, suggestions are open----//
+//---- please mail them to anup.chand.opt@gmail.com----------------------------//
+
+// -------------------------- Enable strict mode ----------- //
 "use strict";
 
+//------------- Declaring soem variables for later use -----//
 let activeButton;
 let activeOpr;
 let problem;
