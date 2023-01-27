@@ -95,10 +95,10 @@ document.getElementById("answer").onclick = function showAnswer() {
   if (oprCount === 1) {
     historyScreen.insertAdjacentText("beforeend", ` ${mainLcd.innerText}`);
     problem = historyScreen.innerText;
-    //console.log(problem);
-    //console.log(eval(problem));
+
     mainLcd.innerText = `${eval(problem)}`;
   }
+
   ansCount = 1;
   oprCount = 0;
 };
